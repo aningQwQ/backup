@@ -1,1 +1,4 @@
 preset=medium:crf=40:profile=high:level=4.0:keyint=120:bframes=0:deblock=1:1:aq-mode=2:me=hex:subme=6:trellis=1:no-mbtree=1
+
+
+preset=medium:crf=35:profile=high:level=4.0:keyint=120:bframes=0:refs=5:mixed-refs=1:deblock=1:1:aq-mode=2:me=hex:subme=6:trellis=1:no-mbtree=1
