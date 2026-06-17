@@ -1,0 +1,112 @@
+---
+name: Build RPM (Fedora 44)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+
+permissions:
+  contents: read
+
+env:
+  PYTHON_VERSION: '3.14'
+
+jobs:
+  build_rpm:
+    name: Build RPM for Fedora 44
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    container:
+      image: fedora:44
+    steps:
+      - name: Install base build tools
+        run: |
+          dnf install -y git wget which rpm-build rpmdevtools cmake make findutils
+
+      - name: Install Fedora build dependencies
+        run: |
+          dnf install -y \
+            gcc15 gcc15-c++ \
+            boost-devel \
+            desktop-file-utils \
+            libappstream-glib \
+            appstream \
+            libcap-devel \
+            libcurl-devel \
+            libdrm-devel \
+            libevdev-devel \
+            libgudev \
+            libnotify-devel \
+            libva-devel \
+            libX11-devel libxcb-devel libXcursor-devel libXfixes-devel \
+            libXi-devel libXinerama-devel libXrandr-devel libXtst-devel \
+            mesa-libGL-devel mesa-libgbm-devel \
+            miniupnpc-devel \
+            numactl-devel \
+            opus-devel \
+            openssl-devel \
+            pipewire-devel \
+            pulseaudio-libs-devel \
+            qt6-qtbase-devel qt6-qtsvg-devel \
+            glslc \
+            vulkan-loader-devel \
+            systemd-rpm-macros systemd-udev \
+            libatomic \
+            uv \
+            xorg-x11-server-Xvfb
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          path: src
+
+      - name: Setup RPM build tree
+        run: |
+          rpmdev-setuptree
+
+      - name: Create tarball
+        run: |
+          cd src
+          VERSION=$(date +%Y%m%d.%H%M%S)
+          BRANCH="master"
+          COMMIT=$(git rev-parse --short HEAD)
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "BRANCH=$BRANCH" >> $GITHUB_ENV
+          echo "COMMIT=$COMMIT" >> $GITHUB_ENV
+          # Tar including submodules (git archive doesn't include them)
+          tar czf $HOME/rpmbuild/SOURCES/tarball.tar.gz --exclude=.git .
+          ls -lh $HOME/rpmbuild/SOURCES/
+
+      - name: Patch spec file
+        run: |
+          cp src/packaging/linux/copr/Sunshine.spec $HOME/rpmbuild/SPECS/Sunshine.spec
+          cd $HOME/rpmbuild/SPECS
+          sed -i "s/%global build_version 0/%global build_version $VERSION/" Sunshine.spec
+          sed -i "s/%global branch 0/%global branch $BRANCH/" Sunshine.spec
+          sed -i "s/%global commit 0/%global commit $COMMIT/" Sunshine.spec
+          # Disable CUDA (no GPU in CI) - clear supported arch array so check fails
+          sed -i 's/cuda_supported_architectures=("x86_64" "aarch64")/cuda_supported_architectures=()/' Sunshine.spec
+          # Disable check section (needs display server)
+          sed -i '/^%check/,/^%install/c\%install' Sunshine.spec
+
+      - name: Build RPM
+        run: |
+          cd $HOME/rpmbuild/SPECS
+          rpmbuild -ba Sunshine.spec 2>&1
+
+      - name: Upload binary RPM artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: sunshine-rpm-fc44
+          path: |
+            /github/home/rpmbuild/RPMS/**/*.rpm
+
+      - name: Upload source RPM artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: sunshine-srpm-fc44
+          path: |
+            /github/home/rpmbuild/SRPMS/**/*.rpm

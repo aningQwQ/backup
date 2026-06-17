@@ -1,0 +1,237 @@
+
+Skip to content
+
+    aningQwQ
+    Sunshine
+
+Repository navigation
+
+代码
+拉取请求
+智能体
+操作
+项目
+安全和质量3 (3)
+洞察
+
+    设置
+
+比较变更
+选择两个分支，看看发生了什么改变，或发起一个新的拉请求。如果您需要，您也可以
+或 了解更多关于差异比较的信息。
+...
+可被合并。 该分支可被自动合并。
+与他人讨论并回顾此次对比中的变化。 了解拉取请求
+
+1 次提交
+8 个文件变更
+
+    1 位贡献者
+
+提交于 2026年5月13日
+
+    Squash merge repo2 master: add AQ-strength UI params, align locale, f…
+
+@aningQwQ
+aningQwQ 提交于 May 13, 2026
+
+显示
+包含 78 处增加 和 0 处删除。
+28 changes: 28 处增加 & 0 处删除 28
+docs/configuration.md
+Original file line number 	Diff line number 	Diff line change
+@@ -3192,6 +3192,34 @@ editing the `conf` file in a text editor. Use the examples as reference.
+    </tr>
+</table>
+
+### sw_aq_mode
+Adaptive quantization mode for software encoders.
+<table>
+    <tr>
+        <th>Value</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>disabled</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>variance AQ (temporal)</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>auto-variance AQ (default)</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>auto-variance AQ with dark scene bias (x264 only)</td>
+    </tr>
+</table>
+
+### sw_aq_strength
+Adaptive quantization strength. Higher values result in more aggressive quantization adjustments. Defaults to 1.0.
+
+<div class="section_buttons">
+
+| Previous          |                            Next |
+4 changes: 4 处增加 & 0 处删除 4
+src/config.cpp
+Original file line number 	Diff line number 	Diff line change
+@@ -460,6 +460,8 @@ namespace config {
+      "superfast"s,  // preset
+      "zerolatency"s,  // tune
+      11,  // superfast
+      2,  // aq_mode (auto-variance)
+      1.0,  // aq_strength
+    },  // software
+
+    {},  // nv
+@@ -1106,6 +1108,8 @@ namespace config {
+      video.sw.svtav1_preset = sw::svtav1_preset_from_view(video.sw.sw_preset);
+    }
+    string_f(vars, "sw_tune", video.sw.sw_tune);
+    int_between_f(vars, "sw_aq_mode", video.sw.aq_mode, {0, 3});
+    double_f(vars, "sw_aq_strength", video.sw.aq_strength);
+
+    int_between_f(vars, "nvenc_preset", video.nv.quality_preset, {1, 7});
+    int_between_f(vars, "nvenc_vbv_increase", video.nv.vbv_percentage_increase, {0, 400});
+2 changes: 2 处增加 & 0 处删除 2
+src/config.h
+Original file line number 	Diff line number 	Diff line change
+@@ -39,6 +39,8 @@ namespace config {
+      std::string sw_preset;
+      std::string sw_tune;
+      std::optional<int> svtav1_preset;
+      int aq_mode;        // 0=off, 1=variance AQ, 2=auto-variance AQ, 3=auto-variance with dark scene bias (x264 only)
+      double aq_strength; // AQ strength (typically 0.0 to 2.0, default 1.0)
+    } sw;
+
+    nvenc::nvenc_config nv;
+9 changes: 9 处增加 & 0 处删除 9
+src/video.cpp
+Original file line number 	Diff line number 	Diff line change
+@@ -887,6 +887,10 @@ namespace video {
+  };
+#endif
+
+  static const auto aq_strength_lambda = std::function<const std::string(const config_t &)>([](const config_t &) {
+    return std::to_string(config::video.sw.aq_strength);
+  });
+
+  encoder_t software {
+    "software"sv,
+    std::make_unique<encoder_platform_formats_avcodec>(
+@@ -907,6 +911,7 @@ namespace video {
+      {
+        {"svtav1-params"s, "keyint=-1:pred-struct=1:force-key-frames=1:mbr=0"s},
+        {"preset"s, &config::video.sw.svtav1_preset},
+        {"aq-mode"s, &config::video.sw.aq_mode},
+      },
+      {},  // SDR-specific options
+      {},  // HDR-specific options
+@@ -933,6 +938,8 @@ namespace video {
+        {"x265-params"s, "info=0:keyint=-1"s},
+        {"preset"s, &config::video.sw.sw_preset},
+        {"tune"s, &config::video.sw.sw_tune},
+        {"aq-mode"s, &config::video.sw.aq_mode},
+        {"aq-strength"s, aq_strength_lambda},
+      },
+      {},  // SDR-specific options
+      {},  // HDR-specific options
+@@ -946,6 +953,8 @@ namespace video {
+      {
+        {"preset"s, &config::video.sw.sw_preset},
+        {"tune"s, &config::video.sw.sw_tune},
+        {"aq-mode"s, &config::video.sw.aq_mode},
+        {"aq-strength"s, aq_strength_lambda},
+      },
+      {},  // SDR-specific options
+      {},  // HDR-specific options
+2 changes: 2 处增加 & 0 处删除 2
+src_assets/common/assets/web/config.html
+Original file line number 	Diff line number 	Diff line change
+@@ -347,6 +347,8 @@ <h1 class="my-4">{{ $t('config.configuration') }}</h1>
+            options: {
+              "sw_preset": "superfast",
+              "sw_tune": "zerolatency",
+              "sw_aq_mode": 2,
+              "sw_aq_strength": 1,
+            },
+          },
+        ],
+17 changes: 17 处增加 & 0 处删除 17
+src_assets/common/assets/web/configs/tabs/encoders/SoftwareEncoder.vue
+Original file line number 	Diff line number 	Diff line change
+@@ -39,6 +39,23 @@ const config = ref(props.config)
+      </select>
+      <div class="form-text">{{ $t('config.sw_tune_desc') }}</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="sw_aq_mode" class="form-label">{{ $t('config.sw_aq_mode') }}</label>
+      <select id="sw_aq_mode" class="form-select" v-model.number="config.sw_aq_mode">
+        <option value="0">{{ $t('config.sw_aq_mode_0') }}</option>
+        <option value="1">{{ $t('config.sw_aq_mode_1') }}</option>
+        <option value="2">{{ $t('config.sw_aq_mode_2') }}</option>
+        <option value="3">{{ $t('config.sw_aq_mode_3') }}</option>
+      </select>
+      <div class="form-text">{{ $t('config.sw_aq_mode_desc') }}</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="sw_aq_strength" class="form-label">{{ $t('config.sw_aq_strength') }}</label>
+      <input id="sw_aq_strength" type="number" class="form-control" v-model.number="config.sw_aq_strength" min="0" max="2" step="0.1">
+      <div class="form-text">{{ $t('config.sw_aq_strength_desc') }}</div>
+    </div>
+  </div>
+</template>
+
+8 changes: 8 处增加 & 0 处删除 8
+src_assets/common/assets/web/public/assets/locale/en.json
+Original file line number 	Diff line number 	Diff line change
+@@ -373,6 +373,14 @@
+    "sw_tune_grain": "grain -- preserves the grain structure in old, grainy film material",
+    "sw_tune_stillimage": "stillimage -- good for slideshow-like content",
+    "sw_tune_zerolatency": "zerolatency -- good for fast encoding and low-latency streaming (default)",
+    "sw_aq_mode": "SW AQ Mode",
+    "sw_aq_mode_desc": "Adaptive quantization mode for software encoders. Defaults to auto-variance.",
+    "sw_aq_mode_0": "disabled",
+    "sw_aq_mode_1": "variance AQ (temporal)",
+    "sw_aq_mode_2": "auto-variance AQ (default)",
+    "sw_aq_mode_3": "auto-variance AQ with dark scene bias (x264 only)",
+    "sw_aq_strength": "SW AQ Strength",
+    "sw_aq_strength_desc": "Adaptive quantization strength (0.0 to 2.0). Higher values result in more aggressive quantization adjustments. Defaults to 1.0. Note: SVT-AV1 does not support this parameter.",
+    "system_tray": "Enable system tray",
+    "system_tray_desc": "Show icon in system tray and display desktop notifications",
+    "touchpad_as_ds4": "Emulate a DS4 gamepad if the client gamepad reports a touchpad is present",
+8 changes: 8 处增加 & 0 处删除 8
+src_assets/common/assets/web/public/assets/locale/zh.json
+Original file line number 	Diff line number 	Diff line change
+@@ -367,6 +367,14 @@
+    "sw_tune_grain": "grain -- 在处理旧的、有颗粒感的电影胶片材料时，保持其原有的颗粒结构。",
+    "sw_tune_stillimage": "stillimage -- 适用于类似幻灯片的内容",
+    "sw_tune_zerolatency": "zerolatency -- 适用于快速编码和低延迟串流（默认值）",
+    "sw_aq_mode": "SW AQ 模式",
+    "sw_aq_mode_desc": "软件编码器自适应量化模式。默认值为 auto-variance。",
+    "sw_aq_mode_0": "disabled - 禁用",
+    "sw_aq_mode_1": "variance AQ - 方差（时域）",
+    "sw_aq_mode_2": "auto-variance AQ - 自动方差（默认）",
+    "sw_aq_mode_3": "auto-variance AQ with dark scene bias - 自动方差+暗场偏置（仅 x264）",
+    "sw_aq_strength": "SW AQ 强度",
+    "sw_aq_strength_desc": "自适应量化强度（0.0–2.0）。数值越大量化调整越激进。默认 1.0。注意：SVT-AV1 不支持此参数。",
+    "system_tray": "启用系统托盘",
+    "system_tray_desc": "在系统托盘显示图标并显示桌面通知",
+    "touchpad_as_ds4": "如果客户端报告游戏手柄存在触摸板，则模拟一个 DS4 游戏手柄",
+Footer
+© 2026 GitHub, Inc.
+Footer navigation
+
+    服务条款
+    隐私
+    安全
+    状态
+    社区
+    文档
+    联系我们
+
