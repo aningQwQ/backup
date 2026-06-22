@@ -1,0 +1,660 @@
+           PID: 338206 (sunshine)
+           UID: 1000 (xuyingjun)
+           GID: 1000 (xuyingjun)
+        Signal: 11 (SEGV)
+     Timestamp: Mon 2026-06-22 08:44:03 CST (4s ago)
+  Command Line: /usr/bin/sunshine
+    Executable: /usr/bin/sunshine
+ Control Group: /user.slice/user-1000.slice/user@1000.service/app.slice/app-dev.lizardbyte.app.Sunshine.service
+          Unit: user@1000.service
+     User Unit: app-dev.lizardbyte.app.Sunshine.service
+         Slice: user-1000.slice
+     Owner UID: 1000 (xuyingjun)
+       Boot ID: 9858e08a328340d793f382a36607d376
+    Machine ID: 27190949dd9045b68e69178ad9f17257
+      Hostname: xuyingjun-fedora
+       Storage: /var/lib/systemd/coredump/core.sunshine.1000.9858e08a328340d793f382a36607d376.338206.1782089043000000.zst (inaccessible)
+       Package: Sunshine/2026.617.152807-1.fc44
+      build-id: 84f19d5ccb58217a1e23e3b10c4bf1e7ddbdd3fe
+       Message: Process 338206 (sunshine) of user 1000 dumped core.
+
+                Module dri_gbm.so from rpm mesa-26.0.8-1.fc44.x86_64
+                Module libspa-videoconvert.so from rpm pipewire-1.6.7-1.fc44.x86_64
+                Module libpipewire-module-session-manager.so from rpm pipewire-1.6.7-1.fc44.x86_64
+                Module libpipewire-module-metadata.so from rpm pipewire-1.6.7-1.fc44.x86_64
+                Module libpipewire-module-adapter.so from rpm pipewire-1.6.7-1.fc44.x86_64
+                Module libpipewire-module-client-device.so from rpm pipewire-1.6.7-1.fc44.x86_64
+                Module libpipewire-module-client-node.so from rpm pipewire-1.6.7-1.fc44.x86_64
+                Module libpipewire-module-protocol-native.so from rpm pipewire-1.6.7-1.fc44.x86_64
+                Module libpipewire-module-rt.so from rpm pipewire-1.6.7-1.fc44.x86_64
+                Module libspa-dbus.so from rpm pipewire-1.6.7-1.fc44.x86_64
+                Module KF6WindowSystemKWaylandPlugin.so from rpm kf6-kwindowsystem-6.27.0-1.fc44.x86_64
+                Module libQt6Svg.so.6 from rpm qt6-qtsvg-6.11.1-1.fc44.x86_64
+                Module libqsvgicon.so from rpm qt6-qtsvg-6.11.1-1.fc44.x86_64
+                Module libKF6Style.so.6 from rpm kf6-frameworkintegration-6.27.0-1.fc44.x86_64
+                Module breeze6.so from rpm plasma-breeze-6.7.0-1.fc44.x86_64
+                Module libduktape.so.207 from rpm duktape-2.7.0-11.fc44.x86_64
+                Module libltdl.so.7 from rpm libtool-2.5.4-10.fc44.x86_64
+                Module libtdb.so.1 from rpm libtdb-1.4.15-1.fc44.x86_64
+                Module libvorbisfile.so.3 from rpm libvorbis-1.3.7-14.fc44.x86_64
+                Module libpxbackend-1.0.so from rpm libproxy-0.5.12-2.fc44.x86_64
+                Module libimobiledevice-glue-1.0.so.0 from rpm libimobiledevice-glue-1.3.2-1.fc44.x86_64
+                Module libusbmuxd-2.0.so.7 from rpm libusbmuxd-2.1.1-1.fc44.x86_64
+                Module libattr.so.1 from rpm attr-2.5.2-8.fc44.x86_64
+                Module libQt6QmlWorkerScript.so.6 from rpm qt6-qtdeclarative-6.11.1-2.fc44.x86_64
+                Module libproxy.so.1 from rpm libproxy-0.5.12-2.fc44.x86_64
+                Module libKF6Codecs.so.6 from rpm kf6-kcodecs-6.27.0-1.fc44.x86_64
+                Module libplist-2.0.so.4 from rpm libplist-2.7.0-1.fc44.x86_64
+                Module libimobiledevice-1.0.so.6 from rpm libimobiledevice-1.4.0-3.fc44.x86_64
+                Module libKF6BreezeIcons.so.6 from rpm kf6-breeze-icons-6.27.0-1.fc44.x86_64
+                Module libKF6Archive.so.6 from rpm kf6-karchive-6.27.0-1.fc44.x86_64
+                Module libKF6Notifications.so.6 from rpm kf6-knotifications-6.27.0-1.fc44.x86_64
+                Module libacl.so.1 from rpm acl-2.3.2-6.fc44.x86_64
+                Module libKF6Crash.so.6 from rpm kf6-kcrash-6.27.0-1.fc44.x86_64
+                Module libQt6OpenGL.so.6 from rpm qt6-qtbase-6.11.1-1.fc44.x86_64
+                Module libQt6QmlModels.so.6 from rpm qt6-qtdeclarative-6.11.1-2.fc44.x86_64
+                Module libQt6QmlMeta.so.6 from rpm qt6-qtdeclarative-6.11.1-2.fc44.x86_64
+                Module libXrender.so.1 from rpm libXrender-0.9.12-4.fc44.x86_64
+                Module libxcb-keysyms.so.1 from rpm xcb-util-keysyms-0.4.1-9.fc44.x86_64
+                Module libXfixes.so.3 from rpm libXfixes-6.0.1-7.fc44.x86_64
+                Module libxcb-res.so.0 from rpm libxcb-1.17.0-7.fc44.x86_64
+                Module libQt6Network.so.6 from rpm qt6-qtbase-6.11.1-1.fc44.x86_64
+                Module libQt6Xml.so.6 from rpm qt6-qtbase-6.11.1-1.fc44.x86_64
+                Module libKF6Bookmarks.so.6 from rpm kf6-kbookmarks-6.27.0-1.fc44.x86_64
+                Module libKF6Completion.so.6 from rpm kf6-kcompletion-6.27.0-1.fc44.x86_64
+                Module libKF6Solid.so.6 from rpm kf6-solid-6.27.0-1.fc44.x86_64
+                Module libKF6BookmarksWidgets.so.6 from rpm kf6-kbookmarks-6.27.0-1.fc44.x86_64
+                Module libKF6IconWidgets.so.6 from rpm kf6-kiconthemes-6.27.0-1.fc44.x86_64
+                Module libKF6ItemViews.so.6 from rpm kf6-kitemviews-6.27.0-1.fc44.x86_64
+                Module libQt6Qml.so.6 from rpm qt6-qtdeclarative-6.11.1-2.fc44.x86_64
+                Module libQt6QuickTemplates2.so.6 from rpm qt6-qtdeclarative-6.11.1-2.fc44.x86_64
+                Module libKF6WidgetsAddons.so.6 from rpm kf6-kwidgetsaddons-6.27.0-1.fc44.x86_64
+                Module libKF6CoreAddons.so.6 from rpm kf6-kcoreaddons-6.27.0-1.fc44.x86_64
+                Module libKF6ConfigCore.so.6 from rpm kf6-kconfig-6.27.0-1.fc44.x86_64
+                Module libKF6ConfigGui.so.6 from rpm kf6-kconfig-6.27.0-1.fc44.x86_64
+                Module libKF6I18n.so.6 from rpm kf6-ki18n-6.27.0-1.fc44.x86_64
+                Module libKF6GuiAddons.so.6 from rpm kf6-kguiaddons-6.27.0-1.fc44.x86_64
+                Module libKF6ColorScheme.so.6 from rpm kf6-kcolorscheme-6.27.0-1.fc44.x86_64
+                Module libKF6IconThemes.so.6 from rpm kf6-kiconthemes-6.27.0-1.fc44.x86_64
+                Module libKF6Service.so.6 from rpm kf6-kservice-6.27.0-1.fc44.x86_64
+                Module libKF6JobWidgets.so.6 from rpm kf6-kjobwidgets-6.27.0-1.fc44.x86_64
+                Module libKF6KIOCore.so.6 from rpm kf6-kio-6.27.0-2.fc44.x86_64
+                Module libQt6Quick.so.6 from rpm qt6-qtdeclarative-6.11.1-2.fc44.x86_64
+                Module libXcursor.so.1 from rpm libXcursor-1.2.3-4.fc44.x86_64
+                Module libKF6WindowSystem.so.6 from rpm kf6-kwindowsystem-6.27.0-1.fc44.x86_64
+                Module libKF6StatusNotifierItem.so.6 from rpm kf6-kstatusnotifieritem-6.27.0-1.fc44.x86_64
+                Module libKF6KIOGui.so.6 from rpm kf6-kio-6.27.0-2.fc44.x86_64
+                Module libKF6KIOWidgets.so.6 from rpm kf6-kio-6.27.0-2.fc44.x86_64
+                Module libKF6KIOFileWidgets.so.6 from rpm kf6-kio-6.27.0-2.fc44.x86_64
+                Module libQt6QuickControls2.so.6 from rpm qt6-qtdeclarative-6.11.1-2.fc44.x86_64
+                Module KDEPlasmaPlatformTheme6.so from rpm plasma-integration-6.7.0-1.fc44.x86_64
+                Module libxdg-shell.so from rpm qt6-qtbase-6.11.1-1.fc44.x86_64
+                Module libwayland-cursor.so.0 from rpm wayland-1.24.0-3.fc44.x86_64
+                Module libQt6WaylandClient.so.6 from rpm qt6-qtbase-6.11.1-1.fc44.x86_64
+                Module libqwayland.so from rpm qt6-qtbase-6.11.1-1.fc44.x86_64
+                Module libavahi-client.so.3 from rpm avahi-0.9~rc2-8.fc44.x86_64
+                Module libavahi-common.so.3 from rpm avahi-0.9~rc2-8.fc44.x86_64
+                Module libspa-journal.so from rpm pipewire-1.6.7-1.fc44.x86_64
+                Module libspa-support.so from rpm pipewire-1.6.7-1.fc44.x86_64
+                Module libtinfo.so.6 from rpm ncurses-6.6-1.fc44.x86_64
+                Module libpciaccess.so.0 from rpm libpciaccess-0.16-17.fc44.x86_64
+                Module libedit.so.0 from rpm libedit-3.1-59.20260512cvs.fc44.x86_64
+                Module libdrm_intel.so.1 from rpm libdrm-2.4.134-1.fc44.x86_64
+                Module libdrm_amdgpu.so.1 from rpm libdrm-2.4.134-1.fc44.x86_64
+                Module libelf.so.1 from rpm elfutils-0.195-1.fc44.x86_64
+                Module libxshmfence.so.1 from rpm libxshmfence-1.3.2-8.fc44.x86_64
+                Module libxcb-sync.so.1 from rpm libxcb-1.17.0-7.fc44.x86_64
+                Module libsensors.so.4 from rpm lm_sensors-3.6.0-24.fc44.x86_64
+                Module libSPIRV-Tools.so from rpm spirv-tools-2026.1-1.fc44.x86_64
+                Module libxcb-present.so.0 from rpm libxcb-1.17.0-7.fc44.x86_64
+                Module libxcb-dri3.so.0 from rpm libxcb-1.17.0-7.fc44.x86_64
+                Module libxcb-shm.so.0 from rpm libxcb-1.17.0-7.fc44.x86_64
+                Module libxcb-xfixes.so.0 from rpm libxcb-1.17.0-7.fc44.x86_64
+                Module libxcb-randr.so.0 from rpm libxcb-1.17.0-7.fc44.x86_64
+                Module libX11-xcb.so.1 from rpm libX11-1.8.13-1.fc44.x86_64
+                Module libgallium-26.0.8.so from rpm mesa-freeworld-26.0.8-1.fc44.x86_64
+                Module libEGL_mesa.so.0 from rpm mesa-26.0.8-1.fc44.x86_64
+                Module libseccomp.so.2 from rpm libseccomp-2.6.0-3.fc44.x86_64
+                Module liblcms2.so.2 from rpm lcms2-2.16-7.fc44.x86_64
+                Module liblzma.so.5 from rpm xz-5.8.2-2.fc44.x86_64
+                Module libXau.so.6 from rpm libXau-1.0.12-4.fc44.x86_64
+                Module libmpg123.so.0 from rpm mpg123-1.32.10-3.fc44.x86_64
+                Module libogg.so.0 from rpm libogg-1.3.6-2.fc44.x86_64
+                Module libvorbisenc.so.2 from rpm libvorbis-1.3.7-14.fc44.x86_64
+                Module libvorbis.so.0 from rpm libvorbis-1.3.7-14.fc44.x86_64
+                Module libFLAC.so.14 from rpm flac-1.5.0-8.fc44.x86_64
+                Module libgsm.so.1 from rpm gsm-1.0.24-2.fc44.x86_64
+                Module libudev.so.1 from rpm systemd-259.6-1.fc44.x86_64
+                Module libcbor.so.0.13 from rpm libcbor-0.13.0-2.fc44.x86_64
+                Module libcrypt.so.2 from rpm libxcrypt-4.5.2-3.fc44.x86_64
+                Module libglycin-2.so.0 from rpm glycin-2.1.1-1.fc44.x86_64
+                Module libbz2.so.1 from rpm bzip2-1.0.8-23.fc44.x86_64
+                Module libgraphite2.so.3 from rpm graphite2-1.3.14-20.fc44.x86_64
+                Module libXext.so.6 from rpm libXext-1.3.6-5.fc44.x86_64
+                Module libxml2.so.2 from rpm libxml2-2.12.10-6.fc44.x86_64
+                Module libGLdispatch.so.0 from rpm libglvnd-1.7.0-9.fc44.x86_64
+                Module libxcb.so.1 from rpm libxcb-1.17.0-7.fc44.x86_64
+                Module libsndfile.so.1 from rpm libsndfile-1.2.2-11.fc44.x86_64
+                Module libblkid.so.1 from rpm util-linux-2.41.5-1.fc44.x86_64
+                Module libkeyutils.so.1 from rpm keyutils-1.6.3-7.fc44.x86_64
+                Module libkrb5support.so.0 from rpm krb5-1.22.2-4.fc44.x86_64
+                Module libcom_err.so.2 from rpm e2fsprogs-1.47.3-4.fc44.x86_64
+                Module libk5crypto.so.3 from rpm krb5-1.22.2-4.fc44.x86_64
+                Module libkrb5.so.3 from rpm krb5-1.22.2-4.fc44.x86_64
+                Module libfido2.so.1 from rpm libfido2-1.16.0-5.fc44.x86_64
+                Module libsasl2.so.3 from rpm cyrus-sasl-2.1.28-35.fc44.x86_64
+                Module libevent-2.1.so.7 from rpm libevent-2.1.12-17.fc44.x86_64
+                Module libunistring.so.5 from rpm libunistring-1.1-11.fc44.x86_64
+                Module libgdk_pixbuf-2.0.so.0 from rpm gdk-pixbuf2-2.44.4-2.fc44.x86_64
+                Module libzstd.so.1 from rpm zstd-1.5.7-5.fc44.x86_64
+                Module libpcre2-16.so.0 from rpm pcre2-10.47-1.fc44.1.x86_64
+                Module libb2.so.1 from rpm libb2-0.98.1-15.fc44.x86_64
+                Module libdouble-conversion.so.3 from rpm double-conversion-3.4.0-3.fc44.x86_64
+                Module libsystemd.so.0 from rpm systemd-259.6-1.fc44.x86_64
+                Module libicui18n.so.77 from rpm icu-77.1-2.fc44.x86_64
+                Module libfreetype.so.6 from rpm freetype-2.14.3-1.fc44.x86_64
+                Module libharfbuzz.so.0 from rpm harfbuzz-14.1.0-2.fc44.x86_64
+                Module libpng16.so.16 from rpm libpng-1.6.58-1.fc44.x86_64
+                Module libOpenGL.so.0 from rpm libglvnd-1.7.0-9.fc44.x86_64
+                Module libGLX.so.0 from rpm libglvnd-1.7.0-9.fc44.x86_64
+                Module libxkbcommon.so.0 from rpm libxkbcommon-1.13.1-2.fc44.x86_64
+                Module libQt6DBus.so.6 from rpm qt6-qtbase-6.11.1-1.fc44.x86_64
+                Module libX11.so.6 from rpm libX11-1.8.13-1.fc44.x86_64
+                Module libfontconfig.so.1 from rpm fontconfig-2.17.0-4.fc44.x86_64
+                Module libEGL.so.1 from rpm libglvnd-1.7.0-9.fc44.x86_64
+                Module libicudata.so.77 from rpm icu-77.1-2.fc44.x86_64
+                Module libdbus-1.so.3 from rpm dbus-1.16.2-1.fc44.x86_64
+                Module libpulsecommon-17.0.so from rpm pulseaudio-17.0-9.fc44.x86_64
+                Module libpcre2-8.so.0 from rpm pcre2-10.47-1.fc44.1.x86_64
+                Module libselinux.so.1 from rpm libselinux-3.10-1.fc44.x86_64
+                Module libmount.so.1 from rpm util-linux-2.41.5-1.fc44.x86_64
+                Module libgmodule-2.0.so.0 from rpm glib2-2.88.1-1.fc44.x86_64
+                Module libexpat.so.1 from rpm expat-2.8.1-1.fc44.x86_64
+                Module libffi.so.8 from rpm libffi-3.5.2-2.fc44.x86_64
+                Module libz.so.1 from rpm zlib-ng-2.3.3-3.fc44.x86_64
+                Module libbrotlicommon.so.1 from rpm brotli-1.2.0-3.fc44.x86_64
+                Module libbrotlidec.so.1 from rpm brotli-1.2.0-3.fc44.x86_64
+                Module libgssapi_krb5.so.2 from rpm krb5-1.22.2-4.fc44.x86_64
+                Module libpsl.so.5 from rpm libpsl-0.21.5-7.fc44.x86_64
+                Module libssh.so.4 from rpm libssh-0.12.0-1.fc44.x86_64
+                Module libidn2.so.0 from rpm libidn2-2.3.8-3.fc44.x86_64
+                Module libnghttp2.so.14 from rpm nghttp2-1.68.0-4.fc44.x86_64
+                Module libngtcp2.so.16 from rpm ngtcp2-1.22.1-1.fc44.x86_64
+                Module libngtcp2_crypto_ossl.so.0 from rpm ngtcp2-1.22.1-1.fc44.x86_64
+                Module libnghttp3.so.9 from rpm nghttp3-1.16.0-1.fc44.x86_64
+                Module libnotify.so.4 from rpm libnotify-0.8.8-1.fc44.x86_64
+                Module libQt6Core.so.6 from rpm qt6-qtbase-6.11.1-1.fc44.x86_64
+                Module libQt6Gui.so.6 from rpm qt6-qtbase-6.11.1-1.fc44.x86_64
+                Module libQt6Widgets.so.6 from rpm qt6-qtbase-6.11.1-1.fc44.x86_64
+                Module libicuuc.so.77 from rpm icu-77.1-2.fc44.x86_64
+                Module libpulse-simple.so.0 from rpm pulseaudio-17.0-9.fc44.x86_64
+                Module libpulse.so.0 from rpm pulseaudio-17.0-9.fc44.x86_64
+                Module libpipewire-0.3.so.0 from rpm pipewire-1.6.7-1.fc44.x86_64
+                Module libglib-2.0.so.0 from rpm glib2-2.88.1-1.fc44.x86_64
+                Module libgobject-2.0.so.0 from rpm glib2-2.88.1-1.fc44.x86_64
+                Module libgio-2.0.so.0 from rpm glib2-2.88.1-1.fc44.x86_64
+                Module libgbm.so.1 from rpm mesa-26.0.8-1.fc44.x86_64
+                Module libwayland-client.so.0 from rpm wayland-1.24.0-3.fc44.x86_64
+                Module libvulkan.so.1 from rpm vulkan-loader-1.4.341.0-1.fc44.x86_64
+                Module libevdev.so.2 from rpm libevdev-1.13.6-2.fc44.x86_64
+                Module libcap.so.2 from rpm libcap-2.78-1.fc44.x86_64
+                Module libdrm.so.2 from rpm libdrm-2.4.134-1.fc44.x86_64
+                Module libcrypto.so.3 from rpm openssl-3.5.7-1.fc44.x86_64
+                Module libssl.so.3 from rpm openssl-3.5.7-1.fc44.x86_64
+                Module libva-drm.so.2 from rpm libva-2.23.0-3.fc44.x86_64
+                Module libva.so.2 from rpm libva-2.23.0-3.fc44.x86_64
+                Module libnuma.so.1 from rpm numactl-2.0.19-4.fc44.x86_64
+                Module libopus.so.0 from rpm opus-1.6-2.fc44.x86_64
+                Module libminiupnpc.so.21 from rpm miniupnpc-2.3.3-4.fc44.x86_64
+                Module libcurl.so.4 from rpm curl-8.18.0-6.fc44.x86_64
+                Module sunshine from rpm Sunshine-2026.617.152807-1.fc44.x86_64
+                Stack trace of thread 338603:
+                #0  0x000000000078758e ff_hw_base_encode_receive_packet (sunshine + 0x38758e)
+                #1  0x0000000000736974 encode_receive_packet_internal (sunshine + 0x336974)
+                #2  0x0000000000736bb7 avcodec_send_frame (sunshine + 0x336bb7)
+                #3  0x00000000005d8c72 _ZN5video24avcodec_encode_session_tD0Ev (sunshine + 0x1d8c72)
+                #4  0x00000000005d217c _ZN6stream11videoThreadEPNS_9session_tE (sunshine + 0x1d217c)
+                #5  0x0000000001682b54 execute_native_thread_routine (sunshine + 0x1282b54)
+                #6  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #7  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338209:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76977 __GI___futex_abstimed_wait_cancelable64 (libc.so.6 + 0x6f977)
+                #3  0x00007fbde6e791cc pthread_cond_wait@@GLIBC_2.3.2 (libc.so.6 + 0x721cc)
+                #4  0x00000000016061d0 _ZNSt18condition_variable4waitERSt11unique_lockISt5mutexE (sunshine + 0x12061d0)
+                #5  0x0000000000519488 _ZN16thread_pool_util10ThreadPool5_mainEv (sunshine + 0x119488)
+                #6  0x0000000001682b54 execute_native_thread_routine (sunshine + 0x1282b54)
+                #7  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #8  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338208:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76674 __syscall_cancel (libc.so.6 + 0x6f674)
+                #3  0x00007fbde6ef0ffe __write (libc.so.6 + 0xe9ffe)
+                #4  0x00000000016034cd _ZNSt12__basic_fileIcE6xsputnEPKcl (sunshine + 0x12034cd)
+                #5  0x000000000164276e _ZNSt13basic_filebufIcSt11char_traitsIcEE22_M_convert_to_externalEPcl (sunshine + 0x124276e)
+                #6  0x0000000001642b52 _ZNSt13basic_filebufIcSt11char_traitsIcEE8overflowEi (sunshine + 0x1242b52)
+                #7  0x00000000016407bd _ZNSt13basic_filebufIcSt11char_traitsIcEE4syncEv (sunshine + 0x12407bd)
+                #8  0x000000000166de21 _ZNSo5flushEv (sunshine + 0x126de21)
+                #9  0x0000000000511fc5 _ZN5boost3log12v2s_mt_posix5sinks30basic_formatting_sink_frontendIcE11feed_recordISt15recursive_mutexNS2_26basic_text_ostream_backendIcEEEEvRKNS1_11record_viewERT_RT0_ (sunshine + 0x111fc5)
+                #10 0x0000000000517c87 _ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJN5boost3log12v2s_mt_posix5sinks17asynchronous_sinkINS6_26basic_text_ostream_backendIcEENS6_20unbounded_fifo_queueEE8run_funcEEEEEE6_M_runEv (sunshine + 0x117c87)
+                #11 0x0000000001682b54 execute_native_thread_routine (sunshine + 0x1282b54)
+                #12 0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #13 0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338206:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76674 __syscall_cancel (libc.so.6 + 0x6f674)
+                #3  0x00007fbde6ef04a6 ppoll (libc.so.6 + 0xe94a6)
+                #4  0x00007fbde9288125 g_main_context_iterate_unlocked.isra.0 (libglib-2.0.so.0 + 0x48125)
+                #5  0x00007fbde92881e3 g_main_context_iteration (libglib-2.0.so.0 + 0x481e3)
+                #6  0x00007fbde7469a9d _ZN20QEventDispatcherGlib13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE (libQt6Core.so.6 + 0x469a9d)
+                #7  0x00007fbde711d57b _ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE (libQt6Core.so.6 + 0x11d57b)
+                #8  0x00007fbde7118992 _ZN16QCoreApplication4execEv (libQt6Core.so.6 + 0x118992)
+                #9  0x0000000000484856 main (sunshine + 0x84856)
+                #10 0x00007fbde6e0a681 __libc_start_call_main (libc.so.6 + 0x3681)
+                #11 0x00007fbde6e0a798 __libc_start_main@@GLIBC_2.34 (libc.so.6 + 0x3798)
+                #12 0x0000000000491575 _start (sunshine + 0x91575)
+
+                Stack trace of thread 338369:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76977 __GI___futex_abstimed_wait_cancelable64 (libc.so.6 + 0x6f977)
+                #3  0x00007fbde6e791cc pthread_cond_wait@@GLIBC_2.3.2 (libc.so.6 + 0x721cc)
+                #4  0x00000000016061d0 _ZNSt18condition_variable4waitERSt11unique_lockISt5mutexE (sunshine + 0x12061d0)
+                #5  0x000000000051b045 _ZN4safe7event_tIbE4viewEv.isra.0 (sunshine + 0x11b045)
+                #6  0x000000000053565f _ZN6nvhttp5startEv (sunshine + 0x13565f)
+                #7  0x0000000001682b54 execute_native_thread_routine (sunshine + 0x1282b54)
+                #8  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #9  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338370:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76977 __GI___futex_abstimed_wait_cancelable64 (libc.so.6 + 0x6f977)
+                #3  0x00007fbde6e791cc pthread_cond_wait@@GLIBC_2.3.2 (libc.so.6 + 0x721cc)
+                #4  0x00000000016061d0 _ZNSt18condition_variable4waitERSt11unique_lockISt5mutexE (sunshine + 0x12061d0)
+                #5  0x000000000051b045 _ZN4safe7event_tIbE4viewEv.isra.0 (sunshine + 0x11b045)
+                #6  0x0000000000592d13 _ZN10confighttp5startEv (sunshine + 0x192d13)
+                #7  0x0000000001682b54 execute_native_thread_routine (sunshine + 0x1282b54)
+                #8  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #9  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338210:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6ec5d82 clock_nanosleep@GLIBC_2.2.5 (libc.so.6 + 0xbed82)
+                #3  0x00007fbde6ed2077 __nanosleep (libc.so.6 + 0xcb077)
+                #4  0x000000000067b163 _ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJZN9inputtino8Keyboard6createERKNS3_16DeviceDefinitionEiEUlvE_EEEEE6_M_runEv.lto_priv.0 (sunshine + 0x27b163)
+                #5  0x0000000001682b54 execute_native_thread_routine (sunshine + 0x1282b54)
+                #6  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #7  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338372:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76674 __syscall_cancel (libc.so.6 + 0x6f674)
+                #3  0x00007fbde6efd935 epoll_wait (libc.so.6 + 0xf6935)
+                #4  0x0000000000492278 .LTHUNK0.lto_priv.0 (sunshine + 0x92278)
+                #5  0x00000000005b5e8a _ZZN11rtsp_stream5startEvENKUlvE_clEv.lto_priv.0 (sunshine + 0x1b5e8a)
+                #6  0x0000000001682b54 execute_native_thread_routine (sunshine + 0x1282b54)
+                #7  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #8  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338371:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76977 __GI___futex_abstimed_wait_cancelable64 (libc.so.6 + 0x6f977)
+                #3  0x00007fbde6e791cc pthread_cond_wait@@GLIBC_2.3.2 (libc.so.6 + 0x721cc)
+                #4  0x00000000016061d0 _ZNSt18condition_variable4waitERSt11unique_lockISt5mutexE (sunshine + 0x12061d0)
+                #5  0x000000000051b045 _ZN4safe7event_tIbE4viewEv.isra.0 (sunshine + 0x11b045)
+                #6  0x00000000005bbdcb _ZN11rtsp_stream5startEv (sunshine + 0x1bbdcb)
+                #7  0x0000000001682b54 execute_native_thread_routine (sunshine + 0x1282b54)
+                #8  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #9  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338373:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76674 __syscall_cancel (libc.so.6 + 0x6f674)
+                #3  0x00007fbde6eefe7e __poll (libc.so.6 + 0xe8e7e)
+                #4  0x00007fbde9f06a53 avahi_simple_poll_run (libavahi-common.so.3 + 0x4a53)
+                #5  0x00007fbde9f06b98 avahi_simple_poll_iterate (libavahi-common.so.3 + 0x4b98)
+                #6  0x00007fbde9f06d7d avahi_simple_poll_loop (libavahi-common.so.3 + 0x4d7d)
+                #7  0x0000000001682b54 execute_native_thread_routine (sunshine + 0x1282b54)
+                #8  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #9  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338376:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76674 __syscall_cancel (libc.so.6 + 0x6f674)
+                #3  0x00007fbde6ef04a6 ppoll (libc.so.6 + 0xe94a6)
+                #4  0x00007fbde9288125 g_main_context_iterate_unlocked.isra.0 (libglib-2.0.so.0 + 0x48125)
+                #5  0x00007fbde92881e3 g_main_context_iteration (libglib-2.0.so.0 + 0x481e3)
+                #6  0x00007fbde7469a9d _ZN20QEventDispatcherGlib13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE (libQt6Core.so.6 + 0x469a9d)
+                #7  0x00007fbde711d57b _ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE (libQt6Core.so.6 + 0x11d57b)
+                #8  0x00007fbde7250e0a _ZN7QThread4execEv (libQt6Core.so.6 + 0x250e0a)
+                #9  0x00007fbde4b3d704 _ZN22QDBusConnectionManager3runEv (libQt6DBus.so.6 + 0x25704)
+                #10 0x00007fbde730ce8f _ZN14QThreadPrivate5startEPv (libQt6Core.so.6 + 0x30ce8f)
+                #11 0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #12 0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338599:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76977 __GI___futex_abstimed_wait_cancelable64 (libc.so.6 + 0x6f977)
+                #3  0x00007fbde6e791cc pthread_cond_wait@@GLIBC_2.3.2 (libc.so.6 + 0x721cc)
+                #4  0x00000000016061d0 _ZNSt18condition_variable4waitERSt11unique_lockISt5mutexE (sunshine + 0x12061d0)
+                #5  0x00000000005c792c _ZN6stream20audioBroadcastThreadERN5boost4asio21basic_datagram_socketINS1_2ip3udpENS1_15any_io_executorEEE (sunshine + 0x1c792c)
+                #6  0x0000000001682b54 execute_native_thread_routine (sunshine + 0x1282b54)
+                #7  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #8  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338598:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76977 __GI___futex_abstimed_wait_cancelable64 (libc.so.6 + 0x6f977)
+                #3  0x00007fbde6e791cc pthread_cond_wait@@GLIBC_2.3.2 (libc.so.6 + 0x721cc)
+                #4  0x00000000016061d0 _ZNSt18condition_variable4waitERSt11unique_lockISt5mutexE (sunshine + 0x12061d0)
+                #5  0x00000000005c9994 _ZN6stream20videoBroadcastThreadERN5boost4asio21basic_datagram_socketINS1_2ip3udpENS1_15any_io_executorEEE (sunshine + 0x1c9994)
+                #6  0x0000000001682b54 execute_native_thread_routine (sunshine + 0x1282b54)
+                #7  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #8  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338665:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76977 __GI___futex_abstimed_wait_cancelable64 (libc.so.6 + 0x6f977)
+                #3  0x00007fbde6e791cc pthread_cond_wait@@GLIBC_2.3.2 (libc.so.6 + 0x721cc)
+                #4  0x00007fbdd880e60d cnd_wait (libgallium-26.0.8.so + 0x60e60d)
+                #5  0x00007fbdd87c4bac util_queue_thread_func (libgallium-26.0.8.so + 0x5c4bac)
+                #6  0x00007fbdd880e54c impl_thrd_routine (libgallium-26.0.8.so + 0x60e54c)
+                #7  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #8  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338671:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76977 __GI___futex_abstimed_wait_cancelable64 (libc.so.6 + 0x6f977)
+                #3  0x00007fbde6e791cc pthread_cond_wait@@GLIBC_2.3.2 (libc.so.6 + 0x721cc)
+                #4  0x00007fbdd880e60d cnd_wait (libgallium-26.0.8.so + 0x60e60d)
+                #5  0x00007fbdd87c4bac util_queue_thread_func (libgallium-26.0.8.so + 0x5c4bac)
+                #6  0x00007fbdd880e54c impl_thrd_routine (libgallium-26.0.8.so + 0x60e54c)
+                #7  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #8  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338636:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6ec5d82 clock_nanosleep@GLIBC_2.2.5 (libc.so.6 + 0xbed82)
+                #3  0x00007fbde6ed2077 __nanosleep (libc.so.6 + 0xcb077)
+                #4  0x0000000000648698 _ZN8pipewire18pipewire_display_t7captureERKSt8functionIFbOSt10shared_ptrIN5platf5img_tEEbEERKS1_IFbRS5_EEPb (sunshine + 0x248698)
+                #5  0x00000000005e4db1 _ZN5video13captureThreadESt10shared_ptrIN4safe7queue_tINS_13capture_ctx_tEEEERN9sync_util6sync_tISt8weak_ptrIN5platf9display_tEESt5mutexEERNS1_7event_tIbEERKNS_9encoder_tE (sunshine + 0x1e4db1)
+                #6  0x00000000005ed934 _ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvSt10shared_ptrIN4safe7queue_tIN5video13capture_ctx_tEEEERN9sync_util6sync_tISt8weak_ptrIN5platf9display_tEESt5mutexEERNS4_7event_tIbEERKNS6_9encoder_tEES9_St17reference_wrapperISH_ESR_ISK_ESR_ISN_EEEEEE6_M_runEv (sunshine + 0x1ed934)
+                #7  0x0000000001682b54 execute_native_thread_routine (sunshine + 0x1282b54)
+                #8  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #9  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338601:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76674 __syscall_cancel (libc.so.6 + 0x6f674)
+                #3  0x00007fbde6efd935 epoll_wait (libc.so.6 + 0xf6935)
+                #4  0x0000000000492278 .LTHUNK0.lto_priv.0 (sunshine + 0x92278)
+                #5  0x0000000000495950 _ZN5boost4asio6detail9scheduler10do_run_oneERNS1_27conditionally_enabled_mutex11scoped_lockERNS1_21scheduler_thread_infoERKNS_6system10error_codeE (sunshine + 0x95950)
+                #6  0x00000000005bd9b9 _ZN6stream10recvThreadERNS_15broadcast_ctx_tE (sunshine + 0x1bd9b9)
+                #7  0x0000000001682b54 execute_native_thread_routine (sunshine + 0x1282b54)
+                #8  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #9  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338377:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76674 __syscall_cancel (libc.so.6 + 0x6f674)
+                #3  0x00007fbde6efd935 epoll_wait (libc.so.6 + 0xf6935)
+                #4  0x0000000000492278 .LTHUNK0.lto_priv.0 (sunshine + 0x92278)
+                #5  0x0000000000495950 _ZN5boost4asio6detail9scheduler10do_run_oneERNS1_27conditionally_enabled_mutex11scoped_lockERNS1_21scheduler_thread_infoERKNS_6system10error_codeE (sunshine + 0x95950)
+                #6  0x0000000000520329 _ZN5boost4asio10io_context3runEv (sunshine + 0x120329)
+                #7  0x0000000000578c5c _ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJZN6nvhttp5startEvEUlPT_E_PN9SimpleWeb6ServerIN5boost4asio19basic_stream_socketINSA_2ip3tcpENSA_15any_io_executorEEEEEEEEEE6_M_runEv.lto_priv.0 (sunshine + 0x178c5c)
+                #8  0x0000000001682b54 execute_native_thread_routine (sunshine + 0x1282b54)
+                #9  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #10 0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338375:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76674 __syscall_cancel (libc.so.6 + 0x6f674)
+                #3  0x00007fbde6efd935 epoll_wait (libc.so.6 + 0xf6935)
+                #4  0x0000000000492278 .LTHUNK0.lto_priv.0 (sunshine + 0x92278)
+                #5  0x0000000000495950 _ZN5boost4asio6detail9scheduler10do_run_oneERNS1_27conditionally_enabled_mutex11scoped_lockERNS1_21scheduler_thread_infoERKNS_6system10error_codeE (sunshine + 0x95950)
+                #6  0x0000000000520329 _ZN5boost4asio10io_context3runEv (sunshine + 0x120329)
+                #7  0x000000000059b9d2 _ZN9SimpleWeb10ServerBaseIN5boost4asio3ssl6streamINS2_19basic_stream_socketINS2_2ip3tcpENS2_15any_io_executorEEEEEE5startERKSt8functionIFvtEE.constprop.0 (sunshine + 0x19b9d2)
+                #8  0x00000000005ab33d _ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJZN10confighttp5startEvEUlPT_E_PN9SimpleWeb6ServerIN5boost4asio3ssl6streamINSA_19basic_stream_socketINSA_2ip3tcpENSA_15any_io_executorEEEEEEEEEEEE6_M_runEv.lto_priv.0 (sunshine + 0x1ab33d)
+                #9  0x0000000001682b54 execute_native_thread_routine (sunshine + 0x1282b54)
+                #10 0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #11 0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338379:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76674 __syscall_cancel (libc.so.6 + 0x6f674)
+                #3  0x00007fbde6eefe7e __poll (libc.so.6 + 0xe8e7e)
+                #4  0x00007fbde0a7e07b _ZN15QtWaylandClient11EventThread3runEv (libQt6WaylandClient.so.6 + 0x2407b)
+                #5  0x00007fbde730ce8f _ZN14QThreadPrivate5startEPv (libQt6Core.so.6 + 0x30ce8f)
+                #6  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #7  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338378:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76674 __syscall_cancel (libc.so.6 + 0x6f674)
+                #3  0x00007fbde6eefe7e __poll (libc.so.6 + 0xe8e7e)
+                #4  0x00007fbde0a7e07b _ZN15QtWaylandClient11EventThread3runEv (libQt6WaylandClient.so.6 + 0x2407b)
+                #5  0x00007fbde730ce8f _ZN14QThreadPrivate5startEPv (libQt6Core.so.6 + 0x30ce8f)
+                #6  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #7  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338374:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76674 __syscall_cancel (libc.so.6 + 0x6f674)
+                #3  0x00007fbde6efd935 epoll_wait (libc.so.6 + 0xf6935)
+                #4  0x0000000000492278 .LTHUNK0.lto_priv.0 (sunshine + 0x92278)
+                #5  0x0000000000495950 _ZN5boost4asio6detail9scheduler10do_run_oneERNS1_27conditionally_enabled_mutex11scoped_lockERNS1_21scheduler_thread_infoERKNS_6system10error_codeE (sunshine + 0x95950)
+                #6  0x0000000000520329 _ZN5boost4asio10io_context3runEv (sunshine + 0x120329)
+                #7  0x0000000000579e8c _ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJZN6nvhttp5startEvEUlPT_E_PNS3_19SunshineHTTPSServerEEEEEE6_M_runEv.lto_priv.0 (sunshine + 0x179e8c)
+                #8  0x0000000001682b54 execute_native_thread_routine (sunshine + 0x1282b54)
+                #9  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #10 0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338672:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76977 __GI___futex_abstimed_wait_cancelable64 (libc.so.6 + 0x6f977)
+                #3  0x00007fbde6e791cc pthread_cond_wait@@GLIBC_2.3.2 (libc.so.6 + 0x721cc)
+                #4  0x00007fbdd880e60d cnd_wait (libgallium-26.0.8.so + 0x60e60d)
+                #5  0x00007fbdd87c4bac util_queue_thread_func (libgallium-26.0.8.so + 0x5c4bac)
+                #6  0x00007fbdd880e54c impl_thrd_routine (libgallium-26.0.8.so + 0x60e54c)
+                #7  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #8  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338670:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76977 __GI___futex_abstimed_wait_cancelable64 (libc.so.6 + 0x6f977)
+                #3  0x00007fbde6e791cc pthread_cond_wait@@GLIBC_2.3.2 (libc.so.6 + 0x721cc)
+                #4  0x00007fbdd880e60d cnd_wait (libgallium-26.0.8.so + 0x60e60d)
+                #5  0x00007fbdd87c4bac util_queue_thread_func (libgallium-26.0.8.so + 0x5c4bac)
+                #6  0x00007fbdd880e54c impl_thrd_routine (libgallium-26.0.8.so + 0x60e54c)
+                #7  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #8  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338648:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76674 __syscall_cancel (libc.so.6 + 0x6f674)
+                #3  0x00007fbde6efd935 epoll_wait (libc.so.6 + 0xf6935)
+                #4  0x00007fbde03ae008 impl_pollfd_wait (libspa-support.so + 0x1c008)
+                #5  0x00007fbde0397528 loop_iterate (libspa-support.so + 0x5528)
+                #6  0x00007fbde91f2281 do_loop (libpipewire-0.3.so.0 + 0x83281)
+                #7  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #8  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338600:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76674 __syscall_cancel (libc.so.6 + 0x6f674)
+                #3  0x00007fbde6eefe7e __poll (libc.so.6 + 0xe8e7e)
+                #4  0x00000000005c23eb _ZN6stream22controlBroadcastThreadEPNS_16control_server_tE (sunshine + 0x1c23eb)
+                #5  0x0000000001682b54 execute_native_thread_routine (sunshine + 0x1282b54)
+                #6  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #7  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338674:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76977 __GI___futex_abstimed_wait_cancelable64 (libc.so.6 + 0x6f977)
+                #3  0x00007fbde6e791cc pthread_cond_wait@@GLIBC_2.3.2 (libc.so.6 + 0x721cc)
+                #4  0x00007fbdd880e60d cnd_wait (libgallium-26.0.8.so + 0x60e60d)
+                #5  0x00007fbdd87c4bac util_queue_thread_func (libgallium-26.0.8.so + 0x5c4bac)
+                #6  0x00007fbdd880e54c impl_thrd_routine (libgallium-26.0.8.so + 0x60e54c)
+                #7  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #8  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338604:
+                #0  0x00007fbde6efb3fd syscall (libc.so.6 + 0xf43fd)
+                #1  0x00007fbde92b84eb g_cond_wait (libglib-2.0.so.0 + 0x784eb)
+                #2  0x00007fbde924a58c g_async_queue_pop_intern_unlocked (libglib-2.0.so.0 + 0xa58c)
+                #3  0x00007fbde92bed64 g_thread_pool_spawn_thread (libglib-2.0.so.0 + 0x7ed64)
+                #4  0x00007fbde92bdd12 g_thread_proxy (libglib-2.0.so.0 + 0x7dd12)
+                #5  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #6  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338602:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76977 __GI___futex_abstimed_wait_cancelable64 (libc.so.6 + 0x6f977)
+                #3  0x00007fbde6e7964c pthread_cond_clockwait@GLIBC_2.30 (libc.so.6 + 0x7264c)
+                #4  0x00000000005cbcec _ZN6stream9recv_pingEPNS_9session_tEN4safe8shared_tINS_15broadcast_ctx_tEE5ptr_tENS_8socket_eESt17basic_string_viewIcSt11char_traitsIcEERN5boost4asio2ip14basic_endpointINSE_3udpEEENSt6chrono8durationIlSt5ratioILl1ELl1000EEEE.isra.0 (sunshine + 0x1cbcec)
+                #5  0x00000000005d2c72 _ZN6stream11audioThreadEPNS_9session_tE (sunshine + 0x1d2c72)
+                #6  0x0000000001682b54 execute_native_thread_routine (sunshine + 0x1282b54)
+                #7  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #8  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338605:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76674 __syscall_cancel (libc.so.6 + 0x6f674)
+                #3  0x00007fbde6ef04a6 ppoll (libc.so.6 + 0xe94a6)
+                #4  0x00007fbde9288125 g_main_context_iterate_unlocked.isra.0 (libglib-2.0.so.0 + 0x48125)
+                #5  0x00007fbde92881e3 g_main_context_iteration (libglib-2.0.so.0 + 0x481e3)
+                #6  0x00007fbde9288231 glib_worker_main (libglib-2.0.so.0 + 0x48231)
+                #7  0x00007fbde92bdd12 g_thread_proxy (libglib-2.0.so.0 + 0x7dd12)
+                #8  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #9  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338607:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76674 __syscall_cancel (libc.so.6 + 0x6f674)
+                #3  0x00007fbde6ef04a6 ppoll (libc.so.6 + 0xe94a6)
+                #4  0x00007fbde9288125 g_main_context_iterate_unlocked.isra.0 (libglib-2.0.so.0 + 0x48125)
+                #5  0x00007fbde92882e7 g_main_loop_run (libglib-2.0.so.0 + 0x482e7)
+                #6  0x00007fbde94fa6c2 gdbus_shared_thread_func.lto_priv.0 (libgio-2.0.so.0 + 0xf76c2)
+                #7  0x00007fbde92bdd12 g_thread_proxy (libglib-2.0.so.0 + 0x7dd12)
+                #8  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #9  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338637:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76674 __syscall_cancel (libc.so.6 + 0x6f674)
+                #3  0x00007fbde6efd935 epoll_wait (libc.so.6 + 0xf6935)
+                #4  0x00007fbde03ae008 impl_pollfd_wait (libspa-support.so + 0x1c008)
+                #5  0x00007fbde0397528 loop_iterate (libspa-support.so + 0x5528)
+                #6  0x00007fbde91f2281 do_loop (libpipewire-0.3.so.0 + 0x83281)
+                #7  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #8  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338663:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76977 __GI___futex_abstimed_wait_cancelable64 (libc.so.6 + 0x6f977)
+                #3  0x00007fbde6e791cc pthread_cond_wait@@GLIBC_2.3.2 (libc.so.6 + 0x721cc)
+                #4  0x00007fbdd880e60d cnd_wait (libgallium-26.0.8.so + 0x60e60d)
+                #5  0x00007fbdd87c4bac util_queue_thread_func (libgallium-26.0.8.so + 0x5c4bac)
+                #6  0x00007fbdd880e54c impl_thrd_routine (libgallium-26.0.8.so + 0x60e54c)
+                #7  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #8  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338666:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76977 __GI___futex_abstimed_wait_cancelable64 (libc.so.6 + 0x6f977)
+                #3  0x00007fbde6e791cc pthread_cond_wait@@GLIBC_2.3.2 (libc.so.6 + 0x721cc)
+                #4  0x00007fbdd880e60d cnd_wait (libgallium-26.0.8.so + 0x60e60d)
+                #5  0x00007fbdd87c4bac util_queue_thread_func (libgallium-26.0.8.so + 0x5c4bac)
+                #6  0x00007fbdd880e54c impl_thrd_routine (libgallium-26.0.8.so + 0x60e54c)
+                #7  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #8  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338664:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76977 __GI___futex_abstimed_wait_cancelable64 (libc.so.6 + 0x6f977)
+                #3  0x00007fbde6e791cc pthread_cond_wait@@GLIBC_2.3.2 (libc.so.6 + 0x721cc)
+                #4  0x00007fbdd880e60d cnd_wait (libgallium-26.0.8.so + 0x60e60d)
+                #5  0x00007fbdd87c4bac util_queue_thread_func (libgallium-26.0.8.so + 0x5c4bac)
+                #6  0x00007fbdd880e54c impl_thrd_routine (libgallium-26.0.8.so + 0x60e54c)
+                #7  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #8  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338667:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76977 __GI___futex_abstimed_wait_cancelable64 (libc.so.6 + 0x6f977)
+                #3  0x00007fbde6e791cc pthread_cond_wait@@GLIBC_2.3.2 (libc.so.6 + 0x721cc)
+                #4  0x00007fbdd880e60d cnd_wait (libgallium-26.0.8.so + 0x60e60d)
+                #5  0x00007fbdd87c4bac util_queue_thread_func (libgallium-26.0.8.so + 0x5c4bac)
+                #6  0x00007fbdd880e54c impl_thrd_routine (libgallium-26.0.8.so + 0x60e54c)
+                #7  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #8  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338668:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76977 __GI___futex_abstimed_wait_cancelable64 (libc.so.6 + 0x6f977)
+                #3  0x00007fbde6e791cc pthread_cond_wait@@GLIBC_2.3.2 (libc.so.6 + 0x721cc)
+                #4  0x00007fbdd880e60d cnd_wait (libgallium-26.0.8.so + 0x60e60d)
+                #5  0x00007fbdd87c4bac util_queue_thread_func (libgallium-26.0.8.so + 0x5c4bac)
+                #6  0x00007fbdd880e54c impl_thrd_routine (libgallium-26.0.8.so + 0x60e54c)
+                #7  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #8  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338669:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76977 __GI___futex_abstimed_wait_cancelable64 (libc.so.6 + 0x6f977)
+                #3  0x00007fbde6e791cc pthread_cond_wait@@GLIBC_2.3.2 (libc.so.6 + 0x721cc)
+                #4  0x00007fbdd880e60d cnd_wait (libgallium-26.0.8.so + 0x60e60d)
+                #5  0x00007fbdd87c4bac util_queue_thread_func (libgallium-26.0.8.so + 0x5c4bac)
+                #6  0x00007fbdd880e54c impl_thrd_routine (libgallium-26.0.8.so + 0x60e54c)
+                #7  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #8  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+
+                Stack trace of thread 338673:
+                #0  0x00007fbde6e82412 __syscall_cancel_arch (libc.so.6 + 0x7b412)
+                #1  0x00007fbde6e7662c __internal_syscall_cancel (libc.so.6 + 0x6f62c)
+                #2  0x00007fbde6e76977 __GI___futex_abstimed_wait_cancelable64 (libc.so.6 + 0x6f977)
+                #3  0x00007fbde6e791cc pthread_cond_wait@@GLIBC_2.3.2 (libc.so.6 + 0x721cc)
+                #4  0x00007fbdd880e60d cnd_wait (libgallium-26.0.8.so + 0x60e60d)
+                #5  0x00007fbdd87c4bac util_queue_thread_func (libgallium-26.0.8.so + 0x5c4bac)
+                #6  0x00007fbdd880e54c impl_thrd_routine (libgallium-26.0.8.so + 0x60e54c)
+                #7  0x00007fbde6e79d19 start_thread (libc.so.6 + 0x72d19)
+                #8  0x00007fbde6efd64c __clone3 (libc.so.6 + 0xf664c)
+                ELF object binary architecture: AMD x86-64
