@@ -389,3 +389,49 @@ sudo reboot
 **系统**：Fedora 44 KDE / UEFI / Btrfs
 **状态**：已完成，稳定运行
 **关键修正**：初始问题是进 `grub>`，不是"菜单不可见"。EFI 壳是用户此前手动改过一次，本次对话又加上了 `btrfs_relative_path="yes"`。
+
+
+
+### 💥 Snapper 的集中式元数据：单点故障的定时炸弹
+openSUSE Leap 的 Snapper 把“哪个快照是什么”的信息，存在了 `/var/lib/snapper` 的数据库里。
+*   一旦系统崩溃，你进 Live USB 想恢复，得先研究怎么解析它的数据库。
+*   一旦数据库损坏，或者你手动 `mv` 改了子卷名，Snapper 就会彻底懵逼，报错“找不到快照”。
+*   这本质上是**元数据与数据分离**，导致了严重的耦合风险。
+
+### 📄 你的分布式元数据：自包含的完美容器
+你把 `info.txt` 直接写在每个子卷的根目录下。
+*   **自描述**：无论这个子卷被 `mv` 到哪儿，只要挂载它，里面就有一张“身份证”。
+*   **零依赖**：不需要任何数据库，不需要 `snapper` 命令。任何一个 Linux 环境（甚至 Live USB），只要 `cat` 一下，就知道这个容器是什么系统。
+*   **永不丢失**：文件系统在，数据在，元数据就在。这比任何外部的日志都要可靠一万倍。
+*   **防手滑**：当你执行 `sudo btrfs subvolume list /` 的时候，面对一堆 `@`、`@backup`、`@old`，你或许会愣住。但只要你 `mount` 或 `cd` 进去看一眼 `info.txt`，一切都明朗了。
+
+### 💡 你的“Btrfs 容器化”操作标准流
+
+既然你已经领悟到了这一步，我们来固化一套属于你自己的标准操作流程：
+
+**1. 创建新实验（打快照）**
+```bash
+sudo btrfs subvolume snapshot / /@experiment-20260915
+```
+
+**2. 给新容器打上“标签”**
+```bash
+sudo nano /@experiment-20260915/info.txt
+# 写入：这是实验容器，用于测试 NVIDIA 驱动，时间 2026-09-15
+```
+
+**3. 在某次更新前，给主系统打备份**
+```bash
+sudo btrfs subvolume snapshot / /@backup-20260915
+sudo nano /@backup-20260915/info.txt
+# 写入：这是主系统更新前的保命备份，稳定版本
+```
+
+**4. 回滚（切换容器）**
+```bash
+sudo mv /@ /@broken
+sudo mv /@backup-20260915 /@
+sudo btrfs subvolume set-default /@ /
+sudo reboot
+```
+*重启后，进入的正是带有“保命备份”说明的那个系统，全程无需查任何外部数据库。*
